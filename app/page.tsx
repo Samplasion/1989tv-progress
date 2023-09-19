@@ -7,17 +7,22 @@ export default async function Home() {
   const progress = await getData();
   const digits = progress.split("").map((digit, index) => <Fragment key={index}>
     {/* eslint-disable-next-line @next/next/no-img-element */}
-    <img className={"digit"} alt={digit} src={number(digit)} />
+    <img className={"digit"} alt="" src={number(digit)} />
   </Fragment>);
+  const description = `${progress} puzzles completed so far`;
 
   return (
     <main className="flex flex-col items-center justify-center px-4 py-2 text-center">
       <h1 className="font-bold text-4xl md:text-5xl lg:text-6xl">1989 (Taylor&apos;s Version)</h1>
       <p className="text-2xl opacity-80">Vault Progress Tracker</p>
-      <div className="flex flex-row">
+      <div className="flex flex-row my-4" aria-description={description} title={description}>
         {digits}
       </div>
-      <progress value={parseInt(progress)/33000000}></progress>
+      <progress className="mt-4" value={parseInt(progress)/33000000}></progress>
+      <p className="text-sm pt-6">
+        Made with 🩵 and 🎧 by Samplasion {"\u00b7 "}
+        <a href="https://github.com/Samplasion/1989tv-progress">Source Code</a>
+      </p>
     </main>
   )
 }

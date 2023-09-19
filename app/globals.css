@@ -15,6 +15,10 @@ body {
   overflow-y: hidden;
 }
 
+a {
+  text-decoration: underline;
+}
+
 main {
   color: white;
   border-radius: 12px;
@@ -31,7 +35,7 @@ main {
 
 .digit {
   width: min(12vw, 116px);
-  height: calc(min(12vw, 116px) * 2.32);
+  height: min(calc(min(12vw, 116px) * 2.32), 20vh);
 }
 
 progress {
