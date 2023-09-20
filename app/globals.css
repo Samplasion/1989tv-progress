@@ -34,8 +34,8 @@ main {
 }
 
 .digit {
-  width: min(12vw, 116px);
-  height: min(calc(min(12vw, 116px) * 2.32), 20vh);
+  width: min(9vw, 116px);
+  height: min(calc(min(9vw, 116px) * 2.32), 20vh);
 }
 
 progress {
