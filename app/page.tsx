@@ -33,5 +33,5 @@ async function getData() {
   });
   const text = await res.text();
 
-  return text.match(/(\d{6,7})/g)![0];
+  return text.match(/(\d{6,8})/g)![0];
 }
