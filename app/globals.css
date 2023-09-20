@@ -26,11 +26,19 @@ main {
   height: calc(100vh - 2 * var(--border));
   width: calc(100vw - 2 * var(--border));
   box-sizing: border-box;
-  background: linear-gradient(
+  background: 
+    linear-gradient(
+      to bottom right,
+      rgba(var(--blue), 0.6),
+      rgba(189, 190, 194, 0.6)
+    ),
+    url(/noise.svg),
+    linear-gradient(
       to bottom right,
       rgb(var(--blue)),
       rgb(189, 190, 194)
     );
+  background-repeat: no-repeat, repeat, no-repeat;
 }
 
 .digit {
